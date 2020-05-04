@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EC456221-47CA-45F4-B865-94FDA21E7DA2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BjSTools.IO</RootNamespace>
+    <AssemblyName>GifDirectEditor</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GifWrapperCtrls\CommonDialogDesigner.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GifWrapperCtrls\GifColorTableTransformFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GifWrapperCtrls\GifColorTableTransformFrm.Designer.cs">
+      <DependentUpon>GifColorTableTransformFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GifWrapperCtrls\GifPartGeneralHexViewCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GifWrapperCtrls\GifPartGeneralHexViewCtrl.Designer.cs">
+      <DependentUpon>GifPartGeneralHexViewCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GifWrapperCtrls\GifPartMetaApplicationCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GifWrapperCtrls\GifPartMetaApplicationCtrl.Designer.cs">
+      <DependentUpon>GifPartMetaApplicationCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GifWrapperCtrls\GifPartMetaGraphicsControlCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GifWrapperCtrls\GifPartMetaGraphicsControlCtrl.Designer.cs">
+      <DependentUpon>GifPartMetaGraphicsControlCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GifWrapperCtrls\GifPartMetaLoopCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GifWrapperCtrls\GifPartMetaLoopCtrl.Designer.cs">
+      <DependentUpon>GifPartMetaLoopCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GifWrapperCtrls\GifPartMetaTextCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GifWrapperCtrls\GifPartMetaTextCtrl.Designer.cs">
+      <DependentUpon>GifPartMetaTextCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GifWrapperCtrls\GifColorTableCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GifWrapperCtrls\GifColorTableCtrl.Designer.cs">
+      <DependentUpon>GifColorTableCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GifWrapperCtrls\GifHexView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GifWrapperCtrls\GifHexView.Designer.cs">
+      <DependentUpon>GifHexView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GifWrapperCtrls\GifPartHeaderCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GifWrapperCtrls\GifPartHeaderCtrl.Designer.cs">
+      <DependentUpon>GifPartHeaderCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GifWrapperCtrls\GifPartLwzImageCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GifWrapperCtrls\GifPartLwzImageCtrl.Designer.cs">
+      <DependentUpon>GifPartLwzImageCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GifWrapperCtrls\IGifCtrl.cs" />
+    <Compile Include="GifWrapperCtrls\SelectNumberFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GifWrapperCtrls\SelectNumberFrm.Designer.cs">
+      <DependentUpon>SelectNumberFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GifWrapperFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GifWrapperFrm.Designer.cs">
+      <DependentUpon>GifWrapperFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GifWrapper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GifWrapperCtrls\GifColorTableTransformFrm.resx">
+      <DependentUpon>GifColorTableTransformFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GifWrapperCtrls\GifPartGeneralHexViewCtrl.resx">
+      <DependentUpon>GifPartGeneralHexViewCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GifWrapperCtrls\GifPartMetaApplicationCtrl.resx">
+      <DependentUpon>GifPartMetaApplicationCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GifWrapperCtrls\GifPartMetaGraphicsControlCtrl.resx">
+      <DependentUpon>GifPartMetaGraphicsControlCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GifWrapperCtrls\GifPartMetaLoopCtrl.resx">
+      <DependentUpon>GifPartMetaLoopCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GifWrapperCtrls\GifPartMetaTextCtrl.resx">
+      <DependentUpon>GifPartMetaTextCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GifWrapperCtrls\GifColorTableCtrl.resx">
+      <DependentUpon>GifColorTableCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GifWrapperCtrls\GifHexView.resx">
+      <DependentUpon>GifHexView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GifWrapperCtrls\GifPartHeaderCtrl.resx">
+      <DependentUpon>GifPartHeaderCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GifWrapperCtrls\GifPartLwzImageCtrl.resx">
+      <DependentUpon>GifPartLwzImageCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GifWrapperCtrls\SelectNumberFrm.resx">
+      <DependentUpon>SelectNumberFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GifWrapperFrm.resx">
+      <DependentUpon>GifWrapperFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\app.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ctrl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\garbage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\header.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lwzimg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unknown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eof.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
